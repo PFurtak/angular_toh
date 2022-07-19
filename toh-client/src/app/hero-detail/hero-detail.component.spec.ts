@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { HeroDetailComponent } from './hero-detail.component';
 
@@ -8,9 +10,9 @@ describe('HeroDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [HeroDetailComponent],
+      imports: [HttpClientModule, RouterModule.forRoot([])],
+    }).compileComponents();
   });
 
   beforeEach(() => {
